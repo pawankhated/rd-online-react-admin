@@ -22,6 +22,7 @@ export type SearchState = {
 }
 
 export type Response<T> = {
+  resultObj?:{
   data?: T
   payload?: {
     message?: string
@@ -30,6 +31,7 @@ export type Response<T> = {
     }
     pagination?: PaginationState
   }
+}
 }
 
 export type QueryState = PaginationState & SortState & FilterState & SearchState
